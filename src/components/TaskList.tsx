@@ -73,6 +73,9 @@ export function TaskList() {
             placeholder="Adicionar novo todo" 
             onChange={(e) => setNewTaskTitle(e.target.value)}
             value={newTaskTitle}
+            onKeyPress={(e)=>{
+              if (e.charCode === 13) handleCreateNewTask()
+            }}
           />
           <button type="submit" data-testid="add-task-button" onClick={handleCreateNewTask}>
             <FiCheckSquare size={16} color="#fff"/>
