@@ -1,5 +1,5 @@
 <h1 align="center">TaskList</h1>
-
+<img src="github/to.do.gif">
 ## Sobre 
 Esta é uma solução para o desafio de  'TaskList' do curso React JS da Rocketseat 
 
