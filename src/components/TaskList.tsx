@@ -24,36 +24,41 @@ export function TaskList() {
       title: newTaskTitle,
       isComplete: false,
     }
-
     setTasks([...tasks, newTask]);
+    setNewTaskTitle('')
   }
 
   function handleToggleTaskCompletion(id: number) {
     let TasksList: Task[] = []
     
-
     tasks.forEach(task => {
       if (task.id === id) {
         task.isComplete = !task.isComplete;
       }
       TasksList.push(task);
     });
-
     setTasks(TasksList);
-    
-
   }
 
   function handleRemoveTask(id: number) {
     let TasksList: Task[] = []
     
-
     tasks.forEach(task => {
       if (task.id !== id) {
         TasksList.push(task);
       }
     });
+    setTasks(TasksList);
+  }
 
+  function handleDeleteCompletedTasks() {
+    let TasksList: Task[] = []
+    
+    tasks.forEach(task => {
+      if (task.isComplete === true) return;
+
+      TasksList.push(task);
+    });
     setTasks(TasksList);
   }
 
@@ -71,6 +76,9 @@ export function TaskList() {
           />
           <button type="submit" data-testid="add-task-button" onClick={handleCreateNewTask}>
             <FiCheckSquare size={16} color="#fff"/>
+          </button>
+          <button className="red" type="button"  onClick={handleDeleteCompletedTasks}>
+            <FiTrash size={16} color="#fff"/>
           </button>
         </div>
       </header>
