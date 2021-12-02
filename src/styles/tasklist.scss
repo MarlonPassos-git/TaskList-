@@ -61,6 +61,10 @@ section.task-list {
         &::placeholder {
           color: var(--text-light)
         }
+
+        &:focus-visible {
+          outline-color: var(--green);
+        }
       }
 
       button {
