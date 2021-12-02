@@ -16,6 +16,7 @@ Você deve criar as funcionalidades para as três funções presentes nesse arqu
 - Agora existe um botão que quando clicado remove todas as tarefas concluidas.
 - Toda vez que adicionamos uma nova tarefa o input limpa 
 - Ajustando o designer para verção mobile
+- adicionando possibilidade de enviar a tafefa apertando o enter
 
 ## 👨‍🎓  Oque aprendi 
 - Que dentro de um forEach, se queremos pular para o proximo objeto do array não podemos usar `continue` mas sim um `return` 
